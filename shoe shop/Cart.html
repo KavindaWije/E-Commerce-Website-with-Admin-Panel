@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Cart.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+            
+        nav ul li.admin-login {
+            margin-top: auto;
+        }
+
+        nav ul li.admin-login button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li.admin-login button:hover {
+            background-color: #45a049;
+        }
+
+        .Cart-Container {
+            width: 80%;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .Header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .Cart-Items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .image-box img {
+            width: 100px;
+        }
+
+        .about {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .counter, .prices {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn {
+            cursor: pointer;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            user-select: none;
+        }
+
+        .count {
+            margin: 10px 0;
+        }
+
+        .checkout {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+        .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .product {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 16px;
+      text-align: center;
+      margin: 10px;
+      width: 30%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+
+    .price {
+      color: grey;
+      font-size: 22px;
+    }
+
+    .add-to-cart {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
+
+    .add-to-cart:hover {
+      background-color: #45a049;
+    }
+
+    .cart-container {
+      margin: 20px;
+    }
+
+    .cart-items {
+      display: flex;
+      flex-direction: column;
+      margin: 10px 0;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .cart-item img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .cart-total {
+      text-align: right;
+      margin: 20px 0;
+    }
+
+    .cart-total span {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    </style>
+
+
+        
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="images/home/Black White Professional Concept Shoes Store Logo.png" alt="HF" width="100px">
+        </div>
+        <ul>
+            <li><a href="homepage2.php">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Product.html">Product</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="account new.php">Account</a></li>
+            <li class="search-bar">
+                <input type="text" placeholder="Search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </li>
+            <li class="cart-icon"><a href="Cart.html"><img src="cart.jpg" alt="Cart"></a></li>
+            <!-- Add the admin login button -->
+            <li class="admin-login">
+                <a href="admin_page.php"><button>Admin Login</button></a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="cart-container">
+        <h3>Shopping Cart</h3>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-total">
+          <span>Total: $<span id="total-amount">0.00</span></span>
+        </div>
+        <button onclick="checkout()">Checkout</button>
+      </div>
+      
+      <footer>
+        <div class="footer">
+          <div class="row">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </div>
+          
+          <div class="row">
+            <ul>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Career</a></li>
+            </ul>
+          </div>
+          
+          <div class="row">
+            INFERNO Copyright © 2023 Inferno - All rights reserved || Designed By: Ashan 
+          </div>
+        </div>
+      </footer>
+      
+      <script>
+        function addToCart(productId, productName, productPrice) {
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "add_to_cart.php", true);
+          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+          xhr.onreadystatechange = function() {
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+              alert('Product added to cart');
+              loadCart(); // Load the updated cart
+            }
+          };
+          xhr.send("product_id=" + productId + "&product_name=" + productName + "&product_price=" + productPrice + "&quantity=1");
+        }
+    
+        function loadCart() {
+          var xhr = new XMLHttpRequest();
+          xhr.open("GET", "get_cart.php", true);
+          xhr.onreadystatechange = function() {
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+              var cart = JSON.parse(this.responseText);
+              var cartItems = document.getElementById('cart-items');
+              cartItems.innerHTML = '';
+    
+              var totalAmount = 0;
+    
+              for (var i = 0; i < cart.length; i++) {
+                var item = cart[i];
+                totalAmount += item.total_price;
+    
+                var cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = '<img src="product/WhatsApp Image 2024-02-21 at 21.01.41_48660fad.jpg" alt="' + item.product_name + '">' +
+                                     '<span>' + item.product_name + '</span>' +
+                                     '<span>' + item.product_price + '</span>' +
+                                     '<span>Qty: ' + item.quantity + '</span>' +
+                                     '<span>Total: ' + item.total_price + '</span>';
+                cartItems.appendChild(cartItem);
+              }
+    
+              document.getElementById('total-amount').textContent = totalAmount.toFixed(2);
+            }
+          };
+          xhr.send();
+        }
+    
+        function checkout() {
+          // Add checkout functionality here
+          alert('Checkout functionality not implemented yet.');
+        }
+    
+        document.addEventListener('DOMContentLoaded', function() {
+          loadCart(); // Load the cart when the page is loaded
+        });
+      </script>
+      </body>
+      </html>

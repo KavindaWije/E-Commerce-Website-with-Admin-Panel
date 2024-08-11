@@ -1,0 +1,222 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", sans-serif;
+  background-image: url("images/login/abstract-white-background-Graphics-3802722-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #393836;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #58fb0d; /* Change the color to your desired hover color */
+}
+
+nav ul li.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li.search-bar input[type="text"] {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+nav ul li.search-bar button[type="submit"] {
+  padding: 8px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+nav ul li.search-bar button[type="submit"]:hover {
+  background-color: #f5e10c;
+}
+
+nav ul li.cart-icon {
+  margin-right: 0;
+}
+
+nav ul li.cart-icon a img {
+  width: 24px;  /* Set the desired width */
+  height: 24px; /* Set the desired height */
+  object-fit: contain; /* Ensures the image maintains its aspect ratio */
+}
+
+/* Shopping Cart Styles */
+.Cart-Container {
+  width: 80%;
+  margin: 50px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.Header .Heading {
+  font-size: 24px;
+  color: #333;
+}
+
+.Header .Action {
+  font-size: 14px;
+  color: #ff0000;
+  cursor: pointer;
+}
+
+.Cart-Items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.Cart-Items .image-box {
+  width: 15%;
+}
+
+.Cart-Items .image-box img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.Cart-Items .about {
+  width: 40%;
+}
+
+.Cart-Items .about .title {
+  font-size: 18px;
+  color: #333;
+}
+
+.Cart-Items .about .subtitle {
+  font-size: 14px;
+  color: #777;
+}
+
+.Cart-Items .about img {
+  margin-top: 5px;
+}
+
+.Cart-Items .counter {
+  display: flex;
+  align-items: center;
+}
+
+.Cart-Items .counter .btn {
+  width: 30px;
+  height: 30px;
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.Cart-Items .counter .btn:hover {
+  background-color: #45a049;
+}
+
+.Cart-Items .counter .count {
+  margin: 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.Cart-Items .prices {
+  text-align: right;
+  width: 20%;
+}
+
+.Cart-Items .prices .amount {
+  font-size: 18px;
+  color: #333;
+}
+
+.Cart-Items .prices .save,
+.Cart-Items .prices .remove {
+  font-size: 14px;
+  color: #ff0000;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.checkout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.checkout .total {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.checkout .total .Subtotal {
+  font-size: 18px;
+  color: #333;
+}
+
+.checkout .total .items {
+  font-size: 14px;
+  color: #777;
+}
+
+.checkout .total .total-amount {
+  font-size: 18px;
+  color: #333;
+}
+
+.checkout .button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer
+}

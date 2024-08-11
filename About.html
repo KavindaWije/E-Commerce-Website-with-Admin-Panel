@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple E-commerce Website</title>
+  <link rel="stylesheet" type="text/css" href="About.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="Cart.css">
+  <style>
+    /* Add CSS here if needed */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: #333;
+    }
+
+    .logo img {
+      width: 100px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    nav ul li a:hover {
+      background-color: #575757;
+      border-radius: 5px;
+    }
+
+    .search-bar input[type="text"] {
+      padding: 5px;
+      border: none;
+      border-radius: 3px;
+    }
+
+    .search-bar button {
+      background-color: #575757;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+    .search-bar button:hover {
+      background-color: #434343;
+    }
+
+    .cart-icon img {
+      width: 24px; /* Adjust the width as needed */
+      height: 24px; /* Adjust the height as needed */
+      object-fit: contain;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer .row {
+      margin-bottom: 20px;
+    }
+
+    footer .row a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer .row ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    footer .row ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="images/home/Black White Professional Concept Shoes Store Logo.png" alt="HF" width="100px">
+    </div>
+    <ul>
+      <li><a href="homepage2.php">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Product.html">Product</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="account new.php">Account</a></li>
+      <li class="search-bar">
+        <input type="text" placeholder="Search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </li>
+      <li class="cart-icon"><a href="Cart.html"><img src="cart.jpg" alt="Cart"></a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h1>About Us</h1>
+    <p>Welcome to Shoes Company! We are passionate about providing high-quality footwear to our customers. With years of experience in the industry, we offer a wide range of shoes for every occasion.</p>
+    <p>Our mission is to deliver comfortable and stylish shoes that meet the needs and preferences of our customers. We strive to stay updated with the latest trends and incorporate them into our designs.</p>
+    <p>At Shoes Company, we prioritize customer satisfaction. We ensure the durability and craftsmanship of our products, aiming to exceed expectations with every pair of shoes we offer. Our dedicated team is committed to delivering excellent customer service.</p>
+    <p>Explore our collection and find the perfect pair of shoes that suits your style and comfort. Thank you for choosing Shoes Company!</p>
+  </div>
+  <h2 style="text-align: center;"><i>ITEMS</i></h2>
+  <div class="gallery">
+    <img src="about/il_fullxfull.1786955067_n9hq.jpg" alt="Gallery Image 3">
+    <img src="about/gallery2-removebg-preview.png" alt="Gallery Image 2">
+  
+    <img src="about/man-shoes-featured-image-1160x724.jpg" alt="Gallery Image 4">
+  </div>
+  <div class="gallery">
+    <img src="about/what-shoes-to-wear-with-skinny-jeans-mens-street-style-jeans-denim-683x1024.jpg" alt="Gallery Image 5">
+    <img src="about/Fqj9q9sWIAAjQfl.jpg" alt="Gallery Image 6">
+    <img src="about/Best formal shoes1677844989770.jpg" alt="Gallery Image 7">
+  </div>
+  <footer>
+    <div class="footer">
+      <div class="row">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+      </div>
+      <div class="row">
+        <ul>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Career</a></li>
+        </ul>
+      </div>
+      <div class="row">
+        INFERNO Copyright © 2023 Inferno - All rights reserved || Designed By: Ashan 
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

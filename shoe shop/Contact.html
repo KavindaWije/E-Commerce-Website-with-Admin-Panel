@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hero Image with Nav Bar</title>
+  <link rel="stylesheet" type="text/css" href="Contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="Cart.css">
+  <style>
+      
+    nav ul li.admin-login {
+  margin-top: auto; /* Pushes the button to the bottom */
+}
+
+nav ul li.admin-login button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li.admin-login button:hover {
+  background-color: #4caf50;
+}
+  
+    /* Add your CSS here */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: #333;
+    }
+
+    .logo img {
+      width: 100px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    nav ul li a:hover {
+      background-color: #575757;
+      border-radius: 5px;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar input[type="text"] {
+      padding: 5px;
+      border: none;
+      border-radius: 3px;
+    }
+
+    .search-bar button {
+      background-color: #575757;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 3px;
+      margin-left: 5px;
+    }
+
+    .search-bar button:hover {
+      background-color: #434343;
+    }
+
+    .cart-icon img {
+      width: 24px; /* Adjust the width as needed */
+      height: 24px; /* Adjust the height as needed */
+      object-fit: contain;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .container .left, .container .right {
+      width: 45%;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer .row {
+      margin-bottom: 20px;
+    }
+
+    footer .row a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer .row ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    footer .row ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="images/home/Black White Professional Concept Shoes Store Logo.png" alt="HF" width="100px">
+    </div>
+    <ul>
+      <li><a href="homepage2.php">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Product.html">Product</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="account new.php">Account</a></li>
+      <li class="search-bar">
+        <input type="text" placeholder="Search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </li>
+      <li class="cart-icon"><a href="Cart.html"><img src="cart.jpg" alt="Cart"></a></li>
+      <!-- Add the admin login button -->
+      <li class="admin-login">
+        <a href="admin_page.php"><button>Admin Login</button></a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="left">
+      <h1>HAPPY FEET</h1>
+      <p>Email: ashangunasekara64@gmail.com</p>
+      <p>Address: NO/94, Yehiya Rd, Isadeen Town, Matara, Sri Lanka</p>
+      <p>Phone: (+94) 714606399</p>
+    </div>
+    <div class="right">
+      <h2>Contact Us</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+  <footer>
+    <div class="footer">
+      <div class="row">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+      </div>
+      <div class="row">
+        <ul>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Career</a></li>
+        </ul>
+      </div>
+      <div class="row">
+        &copy; 2023 Inferno - All rights reserved || Designed By: Ashan 
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

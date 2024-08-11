@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" type="text/css" href="account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Cart.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="images/home/logoo-removebg-preview.png" alt="HF" width="100px">
+        </div>
+        <ul>
+            <li><a href="homepage2.php">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Product.html">Product</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="account new.php">Account</a></li>
+            
+            <li class="search-bar">
+                <input type="text" placeholder="Search">
+                <button type="submit" title="Search"><i class="fa fa-search"></i></button>
+            </li>
+            <li class="cart-icon"><a href="Cart.html"><img src="cart.jpg" alt="Cart"></a></li>
+        </ul>
+    </nav>
+
+    <!-- Shopping Cart Section -->
+    <div class="Cart-Container">
+        <div class="Header">
+            <h3 class="Heading">Shopping Cart</h3>
+            <h5 class="Action">Remove all</h5>
+        </div>
+        <div class="Cart-Items">
+            <div class="image-box">
+                <img src="images/250ml.png" style="height: 120px;" alt="Apple Juice">
+            </div>
+            <div class="about">
+                <h1 class="title">Apple Juice</h1>
+                <h3 class="subtitle">250ml</h3>
+                <img src="images/veg.png" style="height: 30px;" alt="Vegetarian">
+            </div>
+            <div class="counter">
+                <div class="btn">+</div>
+                <div class="count">2</div>
+                <div class="btn">-</div>
+            </div>
+            <div class="prices">
+                <div class="amount">$2.99</div>
+                <div class="save"><u>Save for later</u></div>
+                <div class="remove"><u>Remove</u></div>
+            </div>
+        </div>
+        <hr>
+        <div class="checkout">
+            <div class="total">
+                <div>
+                    <div class="Subtotal">Sub-Total</div>
+                    <div class="items">2 items</div>
+                </div>
+                <div class="total-amount">$5.98</div>
+            </div>
+            <button class="button">Checkout</button>
+        </div>
+    </div>
+</body>
+</html>
